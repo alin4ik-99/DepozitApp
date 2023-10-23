@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//jnbhvfcgvhbjnkml,kijuhygtfredtfyguhijo
+//ooooooooooooooooooooooooooooooooooo
 
 builder.Services.AddScoped<IDepozitCalculateService, DepozitCalculateService>();
 
