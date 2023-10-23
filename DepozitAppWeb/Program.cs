@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//jnbhvfcgvhbjnkml,kijuhygtfredtfyguhijo
+
 builder.Services.AddScoped<IDepozitCalculateService, DepozitCalculateService>();
 
 builder.Services.AddScoped<DataContext>();
