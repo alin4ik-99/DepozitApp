@@ -43,6 +43,7 @@ namespace DepozitApp.BLL.Services
                 mounthlyDepozitReport.MounthDepozit = startDepozit;
                 mounthlyDepozitReport.MounthlyIncome = MounthlyIncome;
                 mounthlyDepozitReport.MounthlyPlus = mounthPlus;
+                mounthlyDepozitReport.DateCreate = DateTime.Now;
 
                 depozitReports[i] = mounthlyDepozitReport;
 

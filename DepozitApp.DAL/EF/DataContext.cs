@@ -9,11 +9,12 @@ namespace DepozitApp.DAL.EF
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-            // Database.EnsureDeleted();
+           // Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
         public DbSet<MounthlyDepozitReport> MounthlyDepozitReports { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

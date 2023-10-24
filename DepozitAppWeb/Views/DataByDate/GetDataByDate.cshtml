@@ -1,0 +1,13 @@
+﻿@using DepozitApp.DAL.Entities;
+
+@model List<MounthlyDepozitReport>
+
+@foreach (var dep in Model)
+{
+    <p>@dep.MounthId</p>
+    <p>@dep.NumberMounth</p>
+    <p>@dep.MounthDepozit</p>
+    <p>@dep.MounthlyIncome</p>
+    <p>@dep.MounthlyPlus</p>
+    <p>@dep.DateCreate</p>
+}

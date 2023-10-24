@@ -10,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IDepozitCalculateService, DepozitCalculateService>();
 
+builder.Services.AddScoped<IGetDataByDateServise, GetDataByDateServise>();
+
+builder.Services.AddScoped<IMounthlyDepozitReportRepository, MounthlyDepozitReportRepository>();
+
 builder.Services.AddScoped<DataContext>();
 
 builder.Services.AddScoped<IBaseRepository<MounthlyDepozitReport>, MounthlyDepozitReportRepository>();

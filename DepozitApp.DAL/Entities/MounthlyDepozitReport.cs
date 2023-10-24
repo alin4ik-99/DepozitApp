@@ -11,6 +11,7 @@ namespace DepozitApp.DAL.Entities
         public double MounthDepozit { get; set; }
         public double MounthlyIncome { get; set; }
         public double MounthlyPlus { get; set; }
+        public DateTime DateCreate{ get; set; }
 
     }
 }

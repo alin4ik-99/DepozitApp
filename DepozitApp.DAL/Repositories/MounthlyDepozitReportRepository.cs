@@ -4,13 +4,15 @@ using DepozitApp.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DepozitApp.DAL.Repositories
 {
-    public class MounthlyDepozitReportRepository : IBaseRepository<MounthlyDepozitReport>
+    public class MounthlyDepozitReportRepository : IMounthlyDepozitReportRepository
     {
         private readonly DataContext dbContex;
         public MounthlyDepozitReportRepository(DataContext dbContex) => this.dbContex = dbContex;
@@ -39,5 +41,15 @@ namespace DepozitApp.DAL.Repositories
             return dbContex.MounthlyDepozitReports.Find(id);  
 
         }
+
+
+        public IEnumerable<MounthlyDepozitReport> SelectDataByDate(DateTime dateCreate1, DateTime dateCreate2)
+
+        {
+            IEnumerable <MounthlyDepozitReport> queryDataByDate = dbContex.MounthlyDepozitReports.Where(c => c.DateCreate > dateCreate1 && c.DateCreate < dateCreate2).ToList();
+
+            return queryDataByDate;
+        }
+
     }
 }
