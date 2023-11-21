@@ -1,12 +1,6 @@
 ﻿using DepozitApp.BLL.Interfaces;
-using DepozitApp.DAL.EF;
-using DepozitApp.DAL.Entities;
 using DepozitApp.DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DepozitApp.Domain.Entities;
 
 namespace DepozitApp.BLL.Services
 {

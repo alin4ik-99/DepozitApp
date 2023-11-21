@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DepozitApp.BLL\DepozitApp.BLL.csproj" />
     <ProjectReference Include="..\DepozitApp.DAL\DepozitApp.DAL.csproj" />
+    <ProjectReference Include="..\DepozitApp.Domain\DepozitApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>

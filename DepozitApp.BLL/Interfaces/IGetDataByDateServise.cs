@@ -1,4 +1,5 @@
-﻿using DepozitApp.DAL.Entities;
+﻿using DepozitApp.Domain.Entities;
+using DepozitApp.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace DepozitApp.BLL.Interfaces
 {
     public interface IGetDataByDateServise
     {
-        public IEnumerable<MounthlyDepozitReport> GetDataByDate(string dateCreate1, string dateCreate2);
+        public IEnumerable<MounthlyDepozitReportViewModel> GetDataByDate(string dateCreate1, string dateCreate2);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using DepozitApp.DAL.EF;
-using DepozitApp.DAL.Entities;
 using DepozitApp.DAL.Interfaces;
+using DepozitApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

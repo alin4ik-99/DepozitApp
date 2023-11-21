@@ -18,6 +18,7 @@ namespace DepozitAppWeb.Controllers
             var res = getDataByDateServise.GetDataByDate(dateCreate1, dateCreate2);
 
             return View(res); 
+            //return Ok(res);
         }
     }
 }

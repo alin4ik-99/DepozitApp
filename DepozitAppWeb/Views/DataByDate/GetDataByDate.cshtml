@@ -1,10 +1,9 @@
-﻿@using DepozitApp.DAL.Entities;
+﻿@using DepozitApp.Domain.ViewModels;
 
-@model List<MounthlyDepozitReport>
+@model IEnumerable<MounthlyDepozitReportViewModel>
 
 @foreach (var dep in Model)
 {
-    <p>@dep.MounthId</p>
     <p>@dep.NumberMounth</p>
     <p>@dep.MounthDepozit</p>
     <p>@dep.MounthlyIncome</p>

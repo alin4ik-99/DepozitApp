@@ -1,5 +1,6 @@
 ﻿
-using DepozitApp.DAL.Entities;
+using DepozitApp.Domain;
+using DepozitApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DepozitApp.DAL.EF

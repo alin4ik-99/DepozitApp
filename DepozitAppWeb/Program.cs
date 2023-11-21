@@ -1,9 +1,9 @@
 using DepozitApp.BLL.Interfaces;
 using DepozitApp.BLL.Services;
 using DepozitApp.DAL.EF;
-using DepozitApp.DAL.Entities;
 using DepozitApp.DAL.Interfaces;
 using DepozitApp.DAL.Repositories;
+using DepozitApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
