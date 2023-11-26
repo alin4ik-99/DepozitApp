@@ -15,11 +15,13 @@ namespace DepozitApp.DAL.EF
         }
 
         public DbSet<MounthlyDepozitReport> MounthlyDepozitReports { get; set; }
+        public DbSet<CurrenciesReport> CurrenciesReports { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MounthlyDepozitReport>().Property(x => x.MounthId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<CurrenciesReport>().Property(x => x.Id).ValueGeneratedOnAdd();
         }
     }
 }

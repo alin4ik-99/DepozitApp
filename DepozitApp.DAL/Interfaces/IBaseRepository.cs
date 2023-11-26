@@ -13,5 +13,7 @@ namespace DepozitApp.DAL.Interfaces
         T Get(int id);
 
         void Delete(T entity);
+
+        IEnumerable<T> GetAll();
     }
 }

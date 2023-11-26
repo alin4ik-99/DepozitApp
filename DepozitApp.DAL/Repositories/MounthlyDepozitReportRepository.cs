@@ -39,9 +39,12 @@ namespace DepozitApp.DAL.Repositories
         public MounthlyDepozitReport Get(int id)
         {
             return dbContex.MounthlyDepozitReports.Find(id);  
-
         }
 
+        public IEnumerable<MounthlyDepozitReport> GetAll()
+        {
+            return dbContex.MounthlyDepozitReports.ToList();
+        }
 
         public IEnumerable<MounthlyDepozitReport> SelectDataByDate(DateTime dateCreate1, DateTime dateCreate2)
 

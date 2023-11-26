@@ -10,7 +10,6 @@ namespace DepozitApp.Domain.ViewModels
     public class MounthlyDepozitReportViewModel
     {
       
-        //public int MounthId { get; set; }
         public int NumberMounth { get; set; }
         public double MounthDepozit { get; set; }
         public double MounthlyIncome { get; set; }
