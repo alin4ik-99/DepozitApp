@@ -16,7 +16,11 @@ builder.Services.AddScoped<IGetCurrenciesReportServise, GetCurrenciesReportServi
 
 builder.Services.AddScoped<IMounthlyDepozitReportRepository, MounthlyDepozitReportRepository>();
 
+builder.Services.AddScoped<IGetRequestService, GetRequestService>();
+
 builder.Services.AddScoped<DataContext>();
+
+builder.Services.AddHttpClient();
 
 builder.Services.AddScoped<IBaseRepository<MounthlyDepozitReport>, MounthlyDepozitReportRepository>();
 
