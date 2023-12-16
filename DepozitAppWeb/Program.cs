@@ -26,6 +26,11 @@ builder.Services.AddScoped<IBaseRepository<MounthlyDepozitReport>, MounthlyDepoz
 
 builder.Services.AddScoped<IBaseRepository<CurrenciesReport>, CurrenciesReportRepository>();
 
+builder.Services.AddScoped<IBaseRepository<DollarCurrencyReport>, DollarCurrencyReportRepository>();
+
+builder.Services.AddHostedService<GetDollarCurrencyHostedService>();
+
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
