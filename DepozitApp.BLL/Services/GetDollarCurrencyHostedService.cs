@@ -1,6 +1,7 @@
 ﻿using DepozitApp.BLL.Interfaces;
 using DepozitApp.DAL.Interfaces;
 using DepozitApp.Domain.Entities;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
@@ -14,12 +15,14 @@ namespace DepozitApp.BLL.Services
 
         private readonly IServiceProvider dollarCurrencyReportRepositoryService;
         private readonly IServiceProvider getRequestService;
+        private readonly IConfiguration configuration;  
 
-        public GetDollarCurrencyHostedService( IServiceProvider _dollarCurrencyReportRepositoryService, IServiceProvider _getRequestService)
+        public GetDollarCurrencyHostedService( IServiceProvider _dollarCurrencyReportRepositoryService, IServiceProvider _getRequestService, IConfiguration _configuration)
         {
 
             dollarCurrencyReportRepositoryService = _dollarCurrencyReportRepositoryService;
             getRequestService = _getRequestService;
+            configuration = _configuration;
         }
 
 
@@ -33,8 +36,11 @@ namespace DepozitApp.BLL.Services
                 .GetRequiredService<IGetRequestService>();
 
 
-                string str = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
-                scopeGetRequestService.Run(str);
+                // string str = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+
+                var str_currencies = configuration.GetSection("str_currencies").Value;
+
+                scopeGetRequestService.Run(str_currencies);
                 var response = scopeGetRequestService.Response;
 
 
